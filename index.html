@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculadora 2</title>
+<script type="text/javascript" src="calculadora.js"></script>
+
+<style>
+
+.calculadora { border: 1px black; width: 660px;text-align: left;
+               background-color: #ffffff;
+}
+			   
+#textoPantalla { width: 660px; text-align: right; font-style: sans-serif;
+    background: #cccccc;
+	border-radius: 15px 15px 15px 15px;
+	height: 65px;
+	width: 605px;
+	font-size:350%;
+	position: left; left: 0px;  padding: 25px 25px;
+    background-color: #cccccc; 
+ 	background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#cccccc) );			 
+}
+
+input[type=button1]{
+    background: #6699cc;
+	border-radius: 15px 15px 15px 15px;
+	height: 100px;
+	width: 100px;
+}	
+
+input[type=button2]{
+  	border-radius: 15px 15px 15px 15px;
+	height: 100px;
+	width: 100px;
+	style="text-align:center;	
+	background: #336699;
+    background: -webkit-gradient(linear, left top, left bottom, from(#6699cc), to(#336699) );
+    background: -moz-linear-gradient(-90deg, #6699cc, #336699);
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#6699cc', endColorstr='#336699');    
+}
+
+input[type=button3]{
+    background: #cc6666;
+	border-radius: 15px 15px 15px 15px;
+	height: 100px;
+	width: 100px;
+	style="text-align:center;	
+}
+
+input[type=button4]{
+    background: #6699cc;
+	border-radius: 15px 15px 15px 15px;
+	height: 100px;
+	width: 210px;
+	style="text-align:center;	
+}
+
+input[type=button5]{
+ 	border-radius: 15px 15px 15px 15px;
+	height: 100px;
+	width: 320px;
+	style="text-align:center;	
+	background: #cc4444;
+    background: -webkit-gradient(linear, left top, left bottom, from(#cc6666), to(#cc4444) );
+    background: -moz-linear-gradient(-90deg, #cc6666, #cc4444);
+    filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#cc6666', endColorstr='#cc4444');            
+}
+
+input[type=button6]{
+    background: #cc6666;
+	border-radius: 50px 50px 50px 50px;
+	height: 100px;
+	width: 100px;
+	style="text-align:center;	
+}
+
+</style>
+</head>
+<body>
+<div class="calculadora">
+<form action="#" name="calculadora" id="calculadora">
+<p id="textoPantalla">0</p>
+<p>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="7" onclick="numero('7')"/>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="8" onclick="numero('8')"/>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="9" onclick="numero('9')"/>
+<input type="button2" style="font-size:60px; color:#b92727; text-align:center; vertical-align:3px  "value="+" onclick="calcular('+')"/>
+<input type="button2" style="font-size:60px; color:#ffffff; text-align:center; vertical-align:3px  "value="-" onclick="calcular('-')"/>
+<input type="button2" style="font-size:40px; color:#ffffff; text-align:center; vertical-align:9px  "value="%" onclick="porcentaje('%')"/>
+</p>
+<p>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="4" onclick="numero('4')"/>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="5" onclick="numero('5')"/>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="6" onclick="numero('6')"/>
+<input type="button2" style="font-size:60px; color:#ffffff; text-align:center; vertical-align:3px "value="÷" onclick="calcular('/')"/>
+<input type="button2" style="font-size:60px; color:#ffffff; text-align:center; vertical-align:3px  "value="x" onclick="calcular('*')"/>
+<input type="button2" style="font-size:50px; color:#ffffff; text-align:center; vertical-align:6px "value="√" onclick="raiz()"/>
+</p>
+<p>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="1" onclick="numero('1')"/>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="2" onclick="numero('2')"/>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center; "value="3" onclick="numero('3')"/>
+<input type="button6" style="font-size:40px; color:#ffffff; text-align:center;  vertical-align:9px "value="AC" onclick="borradoTotal()"/>
+<input type="button3" style="font-size:40px; color:#ffffff; text-align:center;  vertical-align:9px "value="CE" onclick="borradoParcial()"/>
+<input type="button3" style="font-size:40px; color:#ffffff; text-align:center;  vertical-align:9px "value="◄" onclick="borradoUltimaCifra()"/>
+
+
+
+</p>
+<p>
+<input type="button1" style="font-size:70px; color:#000000; text-align:center;  "value="." onclick="numero('.')"/>
+<input type="button4" style="font-size:70px; color:#000000; text-align:center;  "value="0" onclick="numero('0')"/>
+<input type="button5" style="font-size:70px; color:#000000; text-align:center;  "value="=" onclick="igual()"/>
+</p>
+</form>
+</div>
+</body>
+</html>
